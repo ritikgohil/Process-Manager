@@ -144,7 +144,7 @@ class RunningPro(ProcessMan):
         self.pro_list = []
         for p in psutil.process_iter(attrs=['pid','name', 'username','status','memory_percent']):
             q = psutil.Process(p.pid)
-            if p.info['username'] == 'LAPTOP-2EHUIEV1\\Vinca' and p.info['status'] == psutil.STATUS_RUNNING:
+            if p.info['username'] == '<USERNAME>' and p.info['status'] == psutil.STATUS_RUNNING:
                 self.pro_list.append((p.pid, p.info['name'],self.cal(p.info['memory_percent']),p.info['username'],p.info['status']))
                 self.rows+=1
     
